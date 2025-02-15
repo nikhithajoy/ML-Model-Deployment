@@ -1,4 +1,4 @@
-# 🚀 FastAPI BankNote Authentication
+# 🚀 Model Deployment Using FastAPI - Bank Note Authentication
 
 ## 📌 Overview  
 This project demonstrates how to use **FastAPI** to build an API that authenticates banknotes as **real or fake** using a **machine learning model** trained on the BankNote Authentication dataset.  

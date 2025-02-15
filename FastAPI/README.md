@@ -18,6 +18,19 @@ FastAPI is an excellent choice for serving machine learning models as web APIs.
 
 ---
 
+## FastAPI Components
+FastAPI is a modern, high-performance web framework for building APIs with Python. It is based on Pydantic for data validation and Starlette for ASGI applications. Below are the core components:
+
+### FastAPI App Instance
+Before defining API endpoints, you need to create a FastAPI application instance.
+```
+app = FastAPI()
+```
+- FastAPI() creates an instance of the FastAPI framework.
+- This app instance is used to define API routes and handle requests.
+
+---
+
 ## Run the FastAPI Server
 ```
 uvicorn app:app --host 127.0.0.1 --port 8000 --reload

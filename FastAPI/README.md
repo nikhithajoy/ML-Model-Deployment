@@ -17,3 +17,24 @@ We use **Random Forest Classifier** from `scikit-learn` for prediction and **Fas
 FastAPI is an excellent choice for serving machine learning models as web APIs.
 
 ---
+
+## Run the FastAPI Server
+```
+uvicorn app:app --host 127.0.0.1 --port 8000 --reload
+```
+## Test the API
+Open your browser and go to:
+🔹 Swagger UI: http://127.0.0.1:8000/docs
+🔹 Redoc UI: http://127.0.0.1:8000/redoc
+
+To test via cURL or Postman, send a POST request to:
+```
+POST http://127.0.0.1:8000/predict
+Content-Type: application/json
+{
+    "variance": 2.1,
+    "skewness": 3.2,
+    "curtosis": 1.5,
+    "entropy": 0.9
+}
+```

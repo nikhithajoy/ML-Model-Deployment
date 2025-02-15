@@ -21,13 +21,34 @@ FastAPI is an excellent choice for serving machine learning models as web APIs.
 ## FastAPI Components
 FastAPI is a modern, high-performance web framework for building APIs with Python. It is based on Pydantic for data validation and Starlette for ASGI applications. Below are the core components:
 
-### FastAPI App Instance
+### 1. FastAPI App Instance
 Before defining API endpoints, you need to create a FastAPI application instance.
 ```
 app = FastAPI()
 ```
 - FastAPI() creates an instance of the FastAPI framework.
 - This app instance is used to define API routes and handle requests.
+
+### 2. Route Decorators (@app.get(), @app.post())
+Routes define API endpoints, and decorators like @app.get() and @app.post() specify the type of HTTP request.
+
+**a) @app.get() – Handling GET Requests**
+The GET method is used for retrieving data from the server.
+```
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to FastAPI!"}
+```
+- The function read_root() is mapped to the root path /.
+- When accessed via a browser or API client (GET http://127.0.0.1:8000/), it returns {"message": "Welcome to FastAPI!"}.
+
+b) @app.post() – Handling POST Requests
+The POST method is used for sending data to the server, typically for creating or modifying resources.
+```
+@app.post('/predict')
+def predict_authentication(data: BankNote):  # Enforces input validation using BankNote model
+    //block of code
+```
 
 ---
 

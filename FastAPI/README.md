@@ -32,7 +32,7 @@ app = FastAPI()
 ### 2. Route Decorators (@app.get(), @app.post())
 Routes define API endpoints, and decorators like @app.get() and @app.post() specify the type of HTTP request.
 
-**a) @app.get() – Handling GET Requests**
+#### a) @app.get() – Handling GET Requests
 The GET method is used for retrieving data from the server.
 ```
 @app.get("/")
@@ -42,7 +42,7 @@ def read_root():
 - The function read_root() is mapped to the root path /.
 - When accessed via a browser or API client (GET http://127.0.0.1:8000/), it returns {"message": "Welcome to FastAPI!"}.
 
-b) @app.post() – Handling POST Requests
+#### b) @app.post() – Handling POST Requests
 The POST method is used for sending data to the server, typically for creating or modifying resources.
 ```
 @app.post('/predict')
